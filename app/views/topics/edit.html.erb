@@ -1,0 +1,10 @@
+<h1>edit</h1>
+  <%= form_for(@topic) do |f| %>
+    <h4>タイトル</h4>
+    <%= f.text_field :title %>
+    <h4>本文</h4>
+    <%= f.text_area :body %>
+    <%= f.submit 'update Topic' %>
+  <% end %>
+  <%= link_to "show", topic_path(@topic) %>
+  <%= link_to "Back", topics_path %>

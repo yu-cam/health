@@ -1,0 +1,32 @@
+<h1>Topics</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>本文</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= @topics.each do |topic| %>
+      <tr>
+    	<td><%= topic.title %></td>
+    	<td><%= topic.body %></td>
+    	<td>
+    	  <%= link_to "show", topic_path(topic)%>
+    	  <%= link_to "edit", edit_topic_path(topic)%>
+    	  <%= link_to "destroy", topic_path(topic), method: :delete %>
+    	</td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h1>New Topic</h1>
+  <%= form_for(@new_topic) do |f| %>
+    <h4>タイトル</h4>
+    <%= f.text_field :title %>
+    <h4>本文</h4>
+  　<%= f.text_area :body %>
+  　<%= f.submit 'Create Topic' %>
+  <% end %>
