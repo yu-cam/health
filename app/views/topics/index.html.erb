@@ -1,26 +1,28 @@
-<h1>Topics</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>タイトル</th>
-        <th>本文</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= @topics.each do |topic| %>
-      <tr>
-    	<td><%= topic.title %></td>
-    	<td><%= topic.body %></td>
-    	<td>
-    	  <%= link_to "show", topic_path(topic)%>
-    	  <%= link_to "edit", edit_topic_path(topic)%>
-    	  <%= link_to "destroy", topic_path(topic), method: :delete %>
-    	</td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row">
+    <h1>Topics</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>本文</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @topics.each do |topic| %>
+          <tr>
+    	      <td><%= topic.title %></td>
+    	      <td><%= topic.body %></td>
+    	      <td>
+    	        <%= link_to "show", topic_path(topic)%>
+    	        <%= link_to "edit", edit_topic_path(topic)%>
+    	        <%= link_to "destroy", topic_path(topic), method: :delete %>
+    	      </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
 
   <h1>New Topic</h1>
   <%= form_for(@new_topic) do |f| %>
@@ -30,3 +32,5 @@
   　<%= f.text_area :body %>
   　<%= f.submit 'Create Topic' %>
   <% end %>
+  </div>
+</div>
