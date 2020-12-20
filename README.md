@@ -1,24 +1,31 @@
-# README
+# health
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+健康・ダイエット情報共有サイト
 
-Things you may want to cover:
+### サイトテーマ
+健康のために取り組んでいること、オススメのダイエット方など<br>
+美と健康について発信
 
-* Ruby version
+### テーマを選んだ理由
+現代は人生100年時代と呼ばれ、健康で生きることの価値は偉大である。<br>
+健康は日々の習慣から生まれる。<br>
+<br>
+気軽に共有できる場ががあると良いと思い、選定しました。<br>
+健康への意識が高まり、心身ともに健やかな方々が増えると嬉しいです。<br>
 
-* System dependencies
+### ターゲットユーザ
+健康志向、ダイエットに関心のある方
 
-* Configuration
+### 主な利用シーン
+健康、ダイエット情報の取得、発信
 
-* Database creation
+### 機能一覧
+https://docs.google.com/spreadsheets/d/1UtdHq0BF18YyZbIVAAGidLEGvA01oPkF1IaIVy93Dhg/edit#gid=0
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,Ruby
+- フレームワーク：Ruby on Rails
+- 仮想環境：Vagrant,VirtualBox
+ines, etc.)
