@@ -1,10 +1,16 @@
-<h1>edit</h1>
-  <%= form_for(@topic) do |f| %>
+<div class="container">
+  <div class="row">
+  	<div class="col-xs-8">
+    <h1>Edit Topic</h1>
+    <%= form_for(@topic) do |f| %>
     <h4>タイトル</h4>
     <%= f.text_field :title %>
     <h4>本文</h4>
     <%= f.text_area :body %>
-    <%= f.submit 'update Topic' %>
-  <% end %>
-  <%= link_to "show", topic_path(@topic) %>
-  <%= link_to "Back", topics_path %>
+    <%= f.submit 'Update Topic', class: "btn-sm btn-success" %>
+    <% end %>
+    <%= link_to "Show", topic_path(@topic), class: "btn-sm btn-primary" %>
+    <%= link_to "Back", topics_path, class: "btn-sm btn-success" %>
+    </div>
+  </div>
+</div>

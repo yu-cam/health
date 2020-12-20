@@ -26,8 +26,8 @@ class TopicsController < ApplicationController
 
   def update
   	@topic = Topic.find(params[:id])
-  	@topic.update(topic.params)
-  	redirect_to topic_path(@topic.id)
+  	@topic.update(topic_params)
+  	redirect_to topics_path
   end
 
   def destroy

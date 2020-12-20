@@ -1,5 +1,16 @@
 <div class="container">
   <div class="row">
+    <div class="col-xs-3">
+      <h2>New Topic</h2>
+      <%= form_for(@new_topic) do |f| %>
+      <h5>タイトル</h5>
+      <%= f.text_field :title %>
+      <h5>本文</h5>
+  　  <%= f.text_area :body %>
+  　  <%= f.submit 'Create Topic', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="col-xs-9">
     <h1>Topics</h1>
       <table class="table table-striped">
         <thead>
@@ -15,22 +26,14 @@
     	      <td><%= topic.title %></td>
     	      <td><%= topic.body %></td>
     	      <td>
-    	        <%= link_to "show", topic_path(topic)%>
-    	        <%= link_to "edit", edit_topic_path(topic)%>
-    	        <%= link_to "destroy", topic_path(topic), method: :delete %>
+    	        <%= link_to "Show", topic_path(topic), class: "btn-sm btn-primary" %>
+    	        <%= link_to "Edit", edit_topic_path(topic), class: "btn-sm btn-success" %>
+    	        <%= link_to "Destroy", topic_path(topic), method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に消しますか？" %>
     	      </td>
           </tr>
           <% end %>
         </tbody>
       </table>
-
-  <h1>New Topic</h1>
-  <%= form_for(@new_topic) do |f| %>
-    <h4>タイトル</h4>
-    <%= f.text_field :title %>
-    <h4>本文</h4>
-  　<%= f.text_area :body %>
-  　<%= f.submit 'Create Topic' %>
-  <% end %>
+    </div>
   </div>
 </div>
